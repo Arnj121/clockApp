@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+    <link href="http://localhost:2045/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <div id="header">
+        <label style="margin: auto 30px;font-size: xx-large;color: #4A148C"><i class="fal fa-clock" style="margin-right: 10px"></i>Clock</label>
+    </div>
+    <div id="container-lvl1">
+        <div id="sidebar">
+            <label id="new" class="cursor"><i class="fal fa-plus" style="margin-right: 10px;color: #4A148C;"></i>Timers</label>
+            <div id="create-timer">
+                <input id="timer-name" type="text" placeholder="Timer name" autocomplete="off"/>
+                <input id=timer-hr placeholder="HH" type="number"/>
+                <input id="timer-min" placeholder="MM" type="number"/>
+                <input id="timer-sec" placeholder="SS" type="number">
+                <label id="done" class="textborder cursor">Create</label>
+                <label id="cancel" class="textborder cursor">Cancel</label>
+                <label id="start-now" class="textborder cursor">start now</label>
+            </div>
+            <label id="clock" class="cursor sidebarobj"><i style="margin-right: 10px;color: #d1d1d0;" class="fal fa-clock"></i>Clock</label>
+            <label id="timer" class="cursor sidebarobj"><i class="fal fa-chess-clock" style="color: #d1d1d0;margin-right: 10px"></i>Timers</label>
+            <label id="stopwatch" class="cursor sidebarobj"><i class="fal fa-stopwatch" style="color: #d1d1d0;margin-right: 10px"></i>StopWatch</label>
+            <label id="calender" class="cursor sidebarobj"><i class="fal fa-calendar-alt" style="color: #d1d1d0;margin-right: 10px"></i>Calender</label>
+        </div>
+        <div id="container-lvl2">
+            <div id="clock-div">
+                <div id="clock-time">
+                    <span id="clock-hr" style="color: #E040FB"></span>
+                    <span style="color:#4A148C;">:</span>
+                    <span id="clock-min" style="color:#E040FB;"></span>
+                    <span style="color:#4A148C;">:</span>
+                    <span id="clock-sec" style="color:  #D500F9;"></span>
+                </div>
+                <div id="clock-days">
+                    <span id="clock-day" style="color:#FF1744;"></span>
+                    <span id="clock-month" style="color:#304FFE;"></span>
+                    <span id="clock-year" style="color: #E91E63"></span>
+                </div>
+            </div>
+            <div id="timer-div">
+                <div id="nothing">
+                    <label>No Timers</label>
+                </div>
+            </div>
+            <div id="stopwatch-div">
+                <div id="sw">
+                    <div id="display-count">
+                        <span id="sw-hr">0</span>
+                        <span style="margin: 0 10px">:</span>
+                        <span id="sw-min">0</span>
+                        <span style="margin: 0 10px;">:</span>
+                        <span id="sw-sec">0</span>
+                    </div>
+                    <label id="sw-play" style="grid-area: 2/1/2/2;margin: auto" class="cursor"><i class="fal fa-play" style="margin-right: 10px;"></i>Play</label>
+                    <label id="sw-pause" style="grid-area: 2/1/2/2;margin: auto;display: none" class="cursor"><i class="fal fa-stop" style="margin-right: 10px"></i>pause</label>
+                    <label id="sw-reset" style="grid-area: 2/2/2/3;margin: auto" class="cursor"><i class="fal fa-redo" style="margin-right: 10px"></i>reset</label>
+                    <label id="sw-lap" style="grid-area: 2/3/2/3;margin: auto;display: none" class="cursor"><i class="fal fa-flag-checkered" style="margin-right: 10px"></i>Lap</label>
+                </div>
+                <div id="lap-div">
+                    <div id="lap-header">
+                        <span style="grid-area: 1/1/1/2;text-align: center">Lap</span>
+                        <span style="grid-area: 1/2/1/3;text-align: center">Lap times</span>
+                        <span style="grid-area: 1/3/1/3;text-align: center">Overall time</span>
+                    </div>
+                    <div id="lap-data"></div>
+                </div>
+            </div>
+            <div id="calender-div">
+                <div id="display-year">
+                    <i class="fal fa-chevron-left cursor" style="margin: auto 10px;color: #4A148C" id="prevyear"></i>
+                    <label id="year" style="margin: auto 10px;font-size:large;color: #4A148C"></label>
+                    <i class="fal fa-chevron-right cursor" style="margin: auto 10px;color: #4A148C" id="nextyear"></i>
+                    <label class="cursor" style="margin: auto 10px;color: #2962FF;font-size: large" id="now">Now</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="script.js"></script>
